@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #111;
+    color: #ffffff;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #222; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(255, 0, 127, 0.7); /* Neon glow effect */
+    max-width: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #00ffff; /* Neon cyan */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 1); /* Glowing effect */
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Dark cell background */
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff; /* Default text color */
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow */
+}
+
+.cell:hover {
+    background-color: #444; /* Darker on hover */
+    transform: scale(1.05);
+}
+
+.cell.X {
+    color: #ff007f; /* Neon pink */
+    text-shadow: 0 0 10px rgba(255, 0, 127, 1); /* Glowing effect */
+}
+
+.cell.O {
+    color: #00ffff; /* Neon cyan */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 1); /* Glowing effect */
+}
+
+.game-status {
+    font-size: 1.5em;
+    margin: 15px;
+    color: #ffffff; /* White color for status */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glowing effect */
+}
+
+.reset-button {
+    padding: 10px 25px;
+    font-size: 1em;
+    color: #ffffff; /* White color */
+    background-color: #e284e0; /* Neon cyan */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 0 10px rgb(220, 122, 214); /* Neon glow */
+}
+
+.reset-button:hover {
+    background-color: #00cccc; /* Slightly darker cyan */
+    transform: scale(1.05);
+}
+
+.reset-button:active {
+    transform: scale(0.95);
+}
